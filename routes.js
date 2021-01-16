@@ -29,8 +29,10 @@ router.post('/', (req, res) => {
             //set the new ID to the object data submitted by the form
             newObj.id = newObjId
 
+            //push the new data to the existing data object
             viewData.pets.push(newObj)
 
+            //call the writeFile function - if no error then redirect
             utils.setViewData(filePath, viewData, function(err, data) {
                 
             })
