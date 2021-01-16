@@ -1,0 +1,51 @@
+{{!-- {{>header}} --}}
+
+<nav>
+    <a href="/">Back to Home</a>
+</nav>
+
+<p>Fill out the form to put your pet up for adoption</p>
+
+
+<form method="POST" action="/">
+
+<label for="id"></label>
+<input type="hidden" name="id" id="id">
+
+<label for="name">Name:</label>
+<input type="text" name="name" id="name">
+
+<label for="species">Species:</label>
+<input type="text" name="species" id="species">
+
+<label for="sex">Male:</label>
+<input type="radio" name="sex" id="sex" value="male">
+<label for="sex">Female:</label>
+<input type="radio" name="sex" id="sex" value="female">
+
+<label for="breed">Breed:</label>
+<input type="text" name="breed" id="breed">
+
+<label for="age">Age:</label>
+<input type="text" name="age" id="age">
+
+<label for="isAdopted"></label>
+<input type="hidden" name="isAdopted" id="isAdopted">
+
+<label for="owner"></label>
+<input type="hidden" name="owner" id="owner">
+
+<label for="backstory">Why is this pet going up for adoption</label>
+<input type="text" name="backstory" id="backstory">
+
+<label for="likes">What likes does this animal have?</label>
+<input type="text" name="likes" id="likes">
+
+<label for="image"></label>
+<input type="hidden" name="image" id="image" value="/images/chicken.jpg">
+
+<button>Submit</button>
+</form>
+
+
+{{!-- {{footer}} --}}
