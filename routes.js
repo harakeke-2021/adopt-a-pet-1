@@ -28,6 +28,7 @@ router.post('/', (req, res) => {
             
             //set the new ID to the object data submitted by the form
             newObj.id = newObjId
+            newObj.isAdopted = false
 
             //push the new data to the existing data object
             viewData.pets.push(newObj)
