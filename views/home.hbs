@@ -4,18 +4,20 @@
     <a href="/new">Put a pet up for adoption</a>
 </nav>
 
-<div>
-    <h2>Pets avaliable to adopt</h2>
 
+<h2>Pets avaliable to adopt</h2>
+
+<div class="container">
     {{#each pets}}
     {{#unless isAdopted}}
-    <div>
-        {{name}} | {{breed}}
-        <a href="/pets/{{id}}">Click here</a>
+    <div class="pet">
+        <img src="{{image}}" alt="{{name}}">
+        <a href="/pets/{{id}}">
+        <span class="pet-name">{{name}}</span> | {{breed}}
+        </a>
     </div>
     {{/unless}}
     {{/each}}
-
 </div>
 
 <hr>
@@ -23,15 +25,16 @@
 <div>
     <h2>Recently rehomed pets</h2>
 
+<div class="container">
     {{#each pets}}
     {{#if isAdopted}}
-    <div>
-        {{name}} | {{breed}}
-        <a href="/pets/{{id}}">Click here</a>
+    <div class="pet">
+        <img src="{{image}}" alt="{{name}}">
+        <a href="/pets/{{id}}">
+        <span class="pet-name">{{name}}</span> | {{breed}}
+        </a>
     </div>
     {{/if}}
     {{/each}}
-
-
 </div>
 {{!-- add footer partial --}}

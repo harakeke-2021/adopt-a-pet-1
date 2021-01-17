@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-grow: 3;
+}
+
+.pet {
+   text-decoration: none;
+}
+
+.pet-name {
+    font-size: xx-large;
+    text-decoration: none;
+    color: red;
+}
+
+.pet a {
+    display: block;
+    text-decoration: none;
+}
+
+.pet a:hover{
+    background-color: aliceblue;
+}
+
+img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover;
+    object-position: 20% 10%;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
