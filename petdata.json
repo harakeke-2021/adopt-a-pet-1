@@ -8,7 +8,7 @@
       "breed": "French Bulldog",
       "age": "7",
       "isAdopted": true,
-      "owner": "1",
+      "owner": "",
       "backstory": "Joe's previous owner unfortunately passed away so is looking for a new owner to provide him a forever home",
       "likes": "Enjoys running on the beach",
       "image": "/images/frenchBulldog.jpg"
@@ -46,8 +46,8 @@
       "sex": "Female",
       "breed": "Domestic short hair",
       "age": "4",
-      "isAdopted": true,
-      "owner": "1",
+      "isAdopted": false,
+      "owner": "",
       "backstory": "Ladybug was a stray kitten when found and has been waiting some time for someone to adopt her",
       "likes": "Enjoys having her fur groomed",
       "image": "/images/ladyBug.jpg"

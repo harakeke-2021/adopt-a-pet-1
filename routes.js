@@ -28,8 +28,7 @@ router.get('/pets/:id', (req, res) => {
 
     //get the petdata containing the IDs then match the id passed through the file and return all data for that ID
     utils.getViewData(filePath, function (err, viewData) {
-        petData = viewData.pets.find(pet => pet.id == petID)
-        console.log(petData)
+        const petData = viewData.pets.find(pet => pet.id == petID)
         res.render('pet', petData)
     })
 })
