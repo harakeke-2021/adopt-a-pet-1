@@ -1,19 +1,20 @@
 {{!-- add header partial --}}
 
 <nav>
-   <a href="/new">Put a pet up for adoption</a> 
+    <a href="/new">Put a pet up for adoption</a>
 </nav>
 
 <div>
-<h2>Pets avaliable to adopt</h2>
+    <h2>Pets avaliable to adopt</h2>
 
-
-{{#each pets}}
-<div>
-{{name}} | {{breed}}
-<a href="/pets/{{id}}">Click here</a>
-</div>
-{{/each}}
+    {{#each pets}}
+    {{#unless isAdopted}}
+    <div>
+        {{name}} | {{breed}}
+        <a href="/pets/{{id}}">Click here</a>
+    </div>
+    {{/unless}}
+    {{/each}}
 
 </div>
 
@@ -21,5 +22,16 @@
 
 <div>
     <h2>Recently rehomed pets</h2>
+
+    {{#each pets}}
+    {{#if isAdopted}}
+    <div>
+        {{name}} | {{breed}}
+        <a href="/pets/{{id}}">Click here</a>
+    </div>
+    {{/if}}
+    {{/each}}
+
+
 </div>
 {{!-- add footer partial --}}

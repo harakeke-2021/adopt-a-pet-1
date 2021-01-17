@@ -5,4 +5,34 @@
     <a href="/new">Put a pet up for adoption</a>
 </nav>
 
-{{name}}
+<h3>My name is: {{name}}</h3>
+
+<p><img src="{{image}}" alt="{{name}}"></p>
+
+<p>Age: {{age}} | {{breed}} | {{sex}}</p>
+
+<p>Likes: {{likes}}</p>
+<p>About me: {{backstory}}</p>
+
+
+<h4>Adopt me</h4>
+<form action="/pets/:id" method="POST">
+
+<label for="fname">First Name</label>
+<input type="text" name="fname" id="fname">
+
+<label for="lname">Last Name</label>
+<input type="text" name="lname" id="lname">
+
+<label for="email">Email Address</label>
+<input type="email" name="email" id="email">
+
+<label for="isAdopted"></label>
+<input type="hidden" name="isAdopted" id="isAdopted">
+
+<label for="id"></label>
+<input type="hidden" name="id" id="id" value="{{id}}">
+
+<button>Adopt me</button>
+
+</form>

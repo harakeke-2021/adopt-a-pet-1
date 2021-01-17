@@ -43,7 +43,7 @@ router.post('/', (req, res) => {
     //get the existing data file
     utils.getViewData(filePath, function (err, viewData) {
         if (err) {
-            console.log(error)
+            console.log(err)
         } else {
             //Create the new ID for the pet based on the length of viewpets
             const newObjId = viewData.pets.length + 1
@@ -59,10 +59,31 @@ router.post('/', (req, res) => {
             utils.setViewData(filePath, viewData, function (err, data) {
 
             })
-            console.log(viewData)
             res.redirect('/')
         }
     })
 
 
+})
+
+router.post('/pets/:id', (req, res) => {
+
+    const owner = req.body.fname
+    const petID = req.body.id
+
+    utils.getViewData(filePath, function (err, viewData) {
+        if (err) {
+            console.log(err)
+        } else {
+            petData = viewData.pets.find(pet => pet.id == petID)
+            petData.isAdopted = true
+            petData.owner = owner
+
+            utils.setViewData(filePath, viewData, function (err, data) {
+
+            })
+        }
+    })
+
+    res.redirect('/')
 })
